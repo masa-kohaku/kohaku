@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "コハク",
+  "version": "1.1",
+  "description": "Museの画面の右下にコハクを表示する拡張機能",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://muse.ai/*",
+        "https://www.muse.ai/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "kohaku.png",
+        "avatar.png"
+      ],
+      "matches": [
+        "https://muse.ai/*",
+        "https://www.muse.ai/*"
+      ]
+    }
+  ]
+}
